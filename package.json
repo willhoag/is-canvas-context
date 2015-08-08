@@ -1,0 +1,53 @@
+{
+  "name": "is-canvas-context",
+  "description": "sanity check to get the context if input happens to be the canvas; errors if it can't return a context",
+  "version": "0.0.0",
+  "author": {
+    "name": "Will Hoag",
+    "email": "dev@willhoag.com",
+    "url": "www.willhoag.com"
+  },
+  "bugs": {
+    "url": "https://github.com/willhoag/is-canvas-context/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.0",
+    "create-canvas": "^1.0.0",
+    "phantomjs": "^1.9.17",
+    "standard": "^5.0.2",
+    "tap-spec": "^4.0.0",
+    "tape": "^4.0.1",
+    "tape-run": "^1.0.0"
+  },
+  "homepage": "git://github.com/willhoag/is-canvas-context.git",
+  "keywords": [
+    "canvas",
+    "sanity",
+    "check",
+    "convert",
+    "html5"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "browser": "browser.js",
+  "maintainers": [
+    {
+      "name": "devhoag",
+      "email": "dev@willhoag.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/willhoag/is-canvas-context.git"
+  },
+  "scripts": {
+    "build": "npm run build:node && npm run build:browser",
+    "build:node": "babel src/index.es6 > index.js",
+    "build:browser": "browserify -t babelify --standalone isCanvasContext src/browser.es6 --extension .es6 > browser.js",
+    "prepublish": "npm test && npm run build",
+    "test": "standard src && browserify -t babelify --extension .es6 test/index.es6 | tape-run | tap-spec"
+  }
+}
