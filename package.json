@@ -1,7 +1,7 @@
 {
   "name": "is-canvas-context",
-  "description": "sanity check to get the context if input happens to be the canvas; errors if it can't return a context",
-  "version": "0.0.0",
+  "description": "varify variabe is a canvas context",
+  "version": "0.0.1",
   "author": {
     "name": "Will Hoag",
     "email": "dev@willhoag.com",

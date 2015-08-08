@@ -1,6 +1,6 @@
 # is-canvas-context
 
-sanity check to get the context if input happens to be the canvas; errors if it can't return a context
+varify a variable is a canvas context
 
 [![Build Status](https://travis-ci.org/willhoag/is-canvas-context.svg)](https://travis-ci.org/willhoag/is-canvas-context)
 [![npm version](https://badge.fury.io/js/is-canvas-context.svg)](http://badge.fury.io/js/is-canvas-context)
