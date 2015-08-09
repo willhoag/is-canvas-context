@@ -46,7 +46,7 @@
   "scripts": {
     "build": "npm run build:node && npm run build:browser",
     "build:node": "babel src/index.es6 > index.js",
-    "build:browser": "browserify -t babelify --standalone isCanvasContext src/browser.es6 --extension .es6 > browser.js",
+    "build:browser": "babel src/browser.es6 > browser.js",
     "prepublish": "npm test && npm run build",
     "test": "standard src && browserify -t babelify --extension .es6 test/index.es6 | tape-run | tap-spec"
   }
