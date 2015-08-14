@@ -1,7 +1,7 @@
 {
   "name": "is-canvas-context",
   "description": "varify variabe is a canvas context",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": {
     "name": "Will Hoag",
     "email": "dev@willhoag.com",
